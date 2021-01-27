@@ -1,0 +1,13 @@
+digraph G {
+"odom" -> "robot_footprint"[label="Broadcaster: /gazebo\nAverage rate: 10.213 Hz\nMost recent transform: 58.377 ( 0.060 sec old)\nBuffer length: 4.798 sec\n"];
+"chassis" -> "left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.206 Hz\nMost recent transform: 58.401 ( 0.036 sec old)\nBuffer length: 4.801 sec\n"];
+"chassis" -> "right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.206 Hz\nMost recent transform: 58.401 ( 0.036 sec old)\nBuffer length: 4.801 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 58.437"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 58.437"[ shape=plaintext ] ;
+ }->"chassis";
+}
